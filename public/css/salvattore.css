@@ -1,0 +1,37 @@
+/*
+   Spezific styling for salvattore
+   Feel free to edit it as you like
+   More info at http://salvattore.com
+ */
+
+/* Base styles */
+.column {
+    float: left;
+    padding: 5px;
+}
+.size-1of3 {
+    width: 33.333%;
+}
+.size-1of2 {
+    width: 50%;
+}
+
+/* Configurate salvattore with media queries */
+@media screen and (max-width: 768px) {
+    #timeline[data-columns]::before {
+        content: '1 .column';
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1000px) {
+    #timeline[data-columns]::before {
+        content: '2 .column.size-1of2';
+    }
+}
+
+@media screen and (min-width: 1001px) {
+    #timeline[data-columns]::before {
+        content: '3 .column.size-1of3';
+    }
+}
+
